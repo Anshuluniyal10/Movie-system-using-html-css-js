@@ -37,4 +37,24 @@ const showMovies = (data) => {
             moiveBox.appendChild(box) 
         } 
     ) 
+}  
+
+document.querySelector("#search").addEventListener( 
+
+    "keyup",     function (event) { 
+
+        if (event.target.value != "") { 
+
+            getMovies(SEARCHAPI + event.target.value) 
+
+        } else { 
+
+            getMovies(APIURL); 
+
+        } 
+
+    } 
+
+) 
+
 
